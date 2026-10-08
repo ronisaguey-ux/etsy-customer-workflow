@@ -1,0 +1,24 @@
+{
+  "ads": {
+    "monthly_spend_cap_usd": 100,
+    "max_daily_spend_usd": 10,
+    "pause_roas_below": 1.5,
+    "scale_roas_above": 3.0,
+    "note": "The cap is enforced at the API call, not by memory. Raising it is the owner's edit."
+  },
+  "listings": {
+    "max_new_per_day": 20,
+    "max_price_change_pct": 20,
+    "require_image_before_publish": true
+  },
+  "support": {
+    "reply_within_hours": 24,
+    "escalate": ["refund", "chargeback", "legal", "platform notice", "angry"]
+  },
+  "improvement": {
+    "version_before_change": true,
+    "revert_if_metric_drops_pct": 5,
+    "observation_window_days": 7,
+    "note": "See rules.md rule 2: never take a step backwards."
+  }
+}

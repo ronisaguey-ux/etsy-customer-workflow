@@ -1,0 +1,13 @@
+# never commit keys, clonable servers, or runtime state
+config/keys.env
+opencode.json
+.opencode/
+mcp/tool-call-compactor/
+mcp/free-ai/
+mcp/commit-condom/
+mcp/claude-agy-mcp/
+mcp/*/node_modules/
+*.log
+.condom/
+dist/
+config/tcc.config.json

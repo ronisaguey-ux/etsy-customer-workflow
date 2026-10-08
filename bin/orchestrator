@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Thin wrapper so `./bin/orchestrator` still works on macOS/Linux. The launcher itself is Node,
+# because that is what makes it work on Windows too.
+exec node "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/orchestrator.js" "$@"

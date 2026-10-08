@@ -1,0 +1,13 @@
+{
+  "name": "shop-agent-kit",
+  "version": "2.2.0",
+  "private": true,
+  "description": "Self-hosted Etsy + Shopify operations and Roblox development workspace under opencode: rules, skills, deterministic local tool servers, a git gate, and free + Claude subagents.",
+  "scripts": {
+    "test": "node test/env.test.js && node test/run.js && node test/analytics.test.js && node test/roblox.test.js"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "license": "MIT"
+}

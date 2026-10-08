@@ -1,0 +1,32 @@
+{
+  "mcp": {
+    "free-ai": {
+      "command": ["node", "__KIT_DIR__/mcp/free-ai/mcp-server.js"],
+      "environment": { "FREEAI_MCP_ROOT": "__KIT_DIR__" }
+    },
+    "claude-agy": {
+      "command": ["node", "__KIT_DIR__/mcp/claude-agy-mcp/bin/claude-agy-mcp.js"]
+    },
+    "api-anything": {
+      "command": ["node", "__APIANYTHING_ENTRY__", "mcp"]
+    }
+  },
+  "groups": {
+    "free_ai": {
+      "title": "Free AI subagents",
+      "description": "Run subagents and parallel swarms on free models, and read/grep/list files directly. Use this so research and bulk work costs nothing; keep the paid model for judgement.",
+      "servers": ["free-ai"]
+    },
+    "claude_agy": {
+      "title": "Claude subagents (deep reasoning)",
+      "description": "Spawn and drive Claude Code sessions as subagents for work that needs deeper reasoning than the local model: a hard bug whose cause is not obvious, a design decision with trade-offs, a careful review of something that must not be wrong. List sessions, spawn one or many, send a message and wait for the answer, read recent output, stop, resume, switch model. Also drives agy where it is installed. Uses the owner's own Claude subscription, so reach for it deliberately rather than for routine work.",
+      "servers": ["claude-agy"]
+    },
+    "api_anything": {
+      "title": "Websites as APIs",
+      "description": "Call a website as plain JSON instead of driving a browser. Ships working operations for Amazon product search, YouTube and Airbnb search, Google Flights, Goodreads, Hacker News, public Instagram/X profiles, and LinkedIn (needs a login). Use it for product or competitor research and any data that has no official API, and for repeating a web task many times cheaply. Calls are fast HTTP; teaching a NEW site needs Chrome. A blocked or CSRF result means the site wants a session: run the login tool to import the browser's cookies, then retry.",
+      "servers": ["api-anything"]
+    }
+  },
+  "options": { "persist": "agent" }
+}
