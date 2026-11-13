@@ -1,0 +1,20 @@
+{
+  "protect_prefixes": [
+    "0-",
+    "1-",
+    "2-",
+    "3-",
+    "4-",
+    "5-",
+    "6-",
+    "memory-condom",
+    "diaries",
+    "keys",
+    "websearch",
+    "h1-submission",
+    "scope",
+    "rules",
+    "policy"
+  ],
+  "note": "Operating rules are never pruned; historical logs (7-*) go first."
+}
